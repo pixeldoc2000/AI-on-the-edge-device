@@ -706,7 +706,7 @@ void unzip(std::string _in_zip_file, std::string _target_directory){
             // Save to File.
             zw = std::string(archive_filename);
             zw = _target_directory + zw;
-            printf("Filename to extract: %s", zw.c_str());
+            printf("Filename to extract: %s ", zw.c_str());
             FILE* fpTargetFile = OpenFileAndWait(zw.c_str(), "wb");
             fwrite(p, 1, (uint)uncomp_size, fpTargetFile);
             fclose(fpTargetFile);
