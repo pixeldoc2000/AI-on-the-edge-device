@@ -221,7 +221,7 @@ static esp_err_t logfileact_get_handler(httpd_req_t *req)
 
     fd = OpenFileAndWait(currentfilename.c_str(), "r");
     if (!fd) {
-        ESP_LOGE(TAG_FILESERVER, "Failed to read existing file : %s", filepath);
+        ESP_LOGE(TAG_FILESERVER, "Failed to read existing file : %s ", filepath);
         /* Respond with 500 Internal Server Error */
         httpd_resp_send_err(req, HTTPD_500_INTERNAL_SERVER_ERROR, "Failed to read existing file");
         return ESP_FAIL;
